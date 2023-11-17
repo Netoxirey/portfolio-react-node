@@ -1,0 +1,317 @@
+// variables
+$shakespeare-50: #eff9fc;
+$shakespeare-100: #d7eef6;
+$shakespeare-200: #b4deed;
+$shakespeare-300: #80c6e0;
+$shakespeare-400: #4ca8cd;
+$shakespeare-500: #2988b1;
+$shakespeare-600: #256e95;
+$shakespeare-700: #245a7a;
+$shakespeare-800: #254b65;
+$shakespeare-900: #234056;
+$shakespeare-950: #12293a;
+
+
+$background-dark: #18181B;
+//
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; // 1rem = 10px
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+
+body {
+    background-color: $background-dark;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-size: 5.4rem;
+    @media screen and (max-width: 780px) {
+        font-size: 4.2rem;
+    }
+}
+h2{
+    font-size: 4.2rem;
+    @media screen and (max-width: 780px) {
+        font-size: 3.5rem;
+    }
+}
+h3 {
+    font-size: 2.4rem;
+}
+
+p {
+    font-size: 1.8rem;
+    letter-spacing: 0.15rem;
+    line-height: 2.5rem;
+}
+a {
+    all: unset;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+image {
+    width: 100%;
+}
+
+button {
+    all: unset;
+}
+
+li {
+    all: unset;
+}
+//Components
+.container {
+    width: 130rem;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.2rem 2.4rem;
+    border-radius: 0.5rem;
+    background-color: $shakespeare-400;
+    color: $shakespeare-950;
+    transition: background 0.3s ease;
+    &:hover {
+        background-color: $shakespeare-300;
+    }
+}
+
+.btn_overline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1.6rem;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    color: $shakespeare-300;
+    border: 1px solid $shakespeare-300;
+    transition: background 0.3s ease;
+    &:hover {
+        background-color: $shakespeare-950;
+        cursor: pointer;
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    position: relative;
+    padding: 3rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    background-image: radial-gradient(100rem circle at center, rgba(255,255,255,0.06), transparent 40% );
+    border: 1px solid rgba($color: #5a5a5a, $alpha: 0.8);
+    box-shadow: 1px 3px 50px 15px rgba(0,0,0,0.35);
+}
+
+.card_bg {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.card_bg:hover {
+    opacity: 1;
+}
+
+.gradient_text {
+    animation: flow 3s ease infinite;
+}
+
+.grid-responsive {
+    display: grid;
+    gap: 5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.bottom_element {
+    margin-top: auto;
+}
+
+//
+
+.header {
+    position: sticky;
+    top: 0;
+    background-color: $background-dark;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    z-index: 10;
+    .navbar {
+        display: flex;
+        width: 130rem;
+        max-width: 90%;
+        justify-content: space-around;
+        align-items: center;
+        gap: 3rem;
+        a {
+            @media screen and (max-width: 780px) {
+                display: none;
+            }
+        }
+        ul {
+            display: flex;
+            gap: 3rem;
+            @media screen and (max-width: 780px) {
+                display: none;
+            }
+        }
+        .nav_icon {
+            display: none;
+    
+            @media screen and (max-width: 780px) {
+                display: block;
+                width: 3rem;
+                cursor: pointer;
+            }
+        }
+        button {
+            @media screen and (max-width: 780px){
+                display: none;
+            }
+        }
+        img {
+            width: 100%;
+        }
+        .icon {
+            width: 5rem;
+        }
+    }
+}
+
+.nav_mobile {
+    position: absolute;
+    top: 0rem;
+    z-index: 20;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding: 5rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    background-color: $background-dark;
+
+    .nav_icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 3rem;
+        margin: 2rem;
+        cursor: pointer;
+    }
+}
+
+.nav_mobile-show {
+    transform: translateX(0);
+}
+
+.home {
+    text-align: center;
+    background-image: radial-gradient(closest-corner, rgba(36,90,122,0.8), rgba(0,0,0,0), transparent );
+    margin-top: 3rem;
+    .home_content {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        .btn {
+            width: 10%;
+            font-size: 1.4rem;
+            align-self: center;
+        }
+        img {
+            width: 100rem;
+            @media screen and (max-width: 780px) {
+                width: 70rem;
+            }
+        }
+    }
+    
+}
+
+.services {
+    margin-top: 10rem;
+    padding-bottom: 5rem;
+    background-image: radial-gradient(ellipse at bottom, rgba(36,90,122,0.4), rgba(0,0,0,0), transparent );
+    h3 {
+        color: $shakespeare-400;
+    }
+    p {
+        font-size: 1.6rem;
+    }
+    .services_ul {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        font-size: 2rem;
+        font-weight: 700;
+    }
+    .icon {
+        width: 10rem;
+        padding: 1rem;
+        background-color: $shakespeare-400;
+        border-radius: 50%;
+        box-shadow: 0px 11px 5px 7px rgba(76,168,205,0.15);
+    }
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    background-image: radial-gradient(ellipse at top, rgba(36,90,122,0.4), rgba(0,0,0,0), transparent );
+    .about_content {
+        margin: 10rem auto;
+        h2 {
+            text-align: center;
+        }
+        p {
+            margin-top: 5rem;
+        }
+    }
+}
+
+@keyframes flow {
+    0% {
+        background-color: #fff;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    50% {
+        background: linear-gradient(90deg, rgba(128,198,224,1) 0%, rgba(36,90,122,1) 100%);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    100% {
+        background-color: #fff;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+}
