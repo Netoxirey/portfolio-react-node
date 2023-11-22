@@ -12,7 +12,7 @@ function NavBar() {
         <nav className="navbar">
           <img src={pageIcon} alt="Page Icon" className="icon" />
           <ul className="navbar_links">
-            <li><a href="#">About</a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -25,7 +25,8 @@ function NavBar() {
             <img src={hamburgerIcon} alt="Hamburger Icon" />
           </button>
         </nav>
-        <nav className={`nav_mobile ${isShow ? "nav_mobile-show" : ""}`}>
+      </header>
+      <nav className={`nav_mobile ${isShow ? "nav_mobile-show" : ""}`}>
           <button 
             className="nav_icon"
             onClick={() => setIsShow(false)}
@@ -38,7 +39,6 @@ function NavBar() {
           <a href="#contact">Contact</a>
           <a href="cv" className="btn_overline">Download Cv</a>
         </nav>
-      </header>
     </>
   );
 }

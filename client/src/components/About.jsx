@@ -1,7 +1,7 @@
 
 function About() {
   return (
-    <section className="about">
+    <section className="about" id="about">
         <div className="about_content container">
             <h2>Hi, Im <span className="gradient_text">Ernesto</span>. Nice to meet you.</h2>
             <p>Hello! I`m Ernesto Serna, a passionate Full Stack developer with two years of experience in creating innovative web solutions. My focus is on combining server-side development efficiency with client-side design elegance to deliver exceptional user experiences.

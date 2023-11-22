@@ -4,7 +4,7 @@ import backIcon from "../assets/back-end_icon.svg";
 
 function Services() {
   return (
-    <section className="services">
+    <section className="services" id="skills">
       <div className="container grid-responsive">
         {/* Componente Card para Front-End Development */}
         <Card>
