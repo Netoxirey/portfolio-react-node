@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+// eslint-disable-next-line react/prop-types
 const Card = ({children}) => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 

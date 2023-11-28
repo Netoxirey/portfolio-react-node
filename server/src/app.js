@@ -1,10 +1,15 @@
 const express = require('express');
-const projectsRouter = require('./routes/projets.router');
+const projectsRouter = require('./routes/projects.router')
 const connectMongo = require('./utils/mongo');
+const cloudinary = require('cloudinary').v2;
 
 const app = express();
 
 connectMongo();
+
+cloudinary.config({
+    secure: true
+});
 
 app.use(express.json());
 

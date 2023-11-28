@@ -1,7 +1,10 @@
 import { useState } from "react";
+import NavBarMobile from "@components/NavBarMobile";
 import hamburgerIcon from "../assets/hamburger_icon.svg";
-import closeIcon from "../assets/close_icon.svg";
 import pageIcon from "../assets/page_icon.svg";
+import { links } from "../utils/utils";
+
+
 
 function NavBar() {
   const [isShow, setIsShow] = useState(false);
@@ -12,10 +15,9 @@ function NavBar() {
         <nav className="navbar">
           <img src={pageIcon} alt="Page Icon" className="icon" />
           <ul className="navbar_links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            {links?.map((link) => (
+              <li key={link.name}><a href={link.anchor}>{link.name}</a></li>
+            ))}
           </ul>
           <a href="cv" className="btn">Download Cv</a>
           <button 
@@ -26,19 +28,7 @@ function NavBar() {
           </button>
         </nav>
       </header>
-      <nav className={`nav_mobile ${isShow ? "nav_mobile-show" : ""}`}>
-          <button 
-            className="nav_icon"
-            onClick={() => setIsShow(false)}
-          >
-            <img src={closeIcon} alt="Close Icon" />
-          </button>
-          <a href="#">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
-          <a href="cv" className="btn_overline">Download Cv</a>
-        </nav>
+      <NavBarMobile show={isShow} toggle={setIsShow} />
     </>
   );
 }

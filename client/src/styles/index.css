@@ -154,7 +154,7 @@ li {
   z-index: 10;
   animation: enhance-header linear both;
   animation-timeline: scroll(root);
-  animation-range: 0, 1rem;
+  animation-range: 0 1rem;
 }
 .header .navbar {
   display: flex;
@@ -206,11 +206,12 @@ li {
 
 .nav_mobile {
   position: fixed;
-  top: 0rem;
-  z-index: 20;
+  height: 100%;
+  top: 0;
   right: 0;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 3rem;
   padding: 5rem;
@@ -230,6 +231,7 @@ li {
 
 .nav_mobile-show {
   transform: translateX(0);
+  z-index: 20;
 }
 
 .home {
@@ -343,5 +345,13 @@ li {
     background-color: #fff;
     -webkit-background-clip: text;
     color: transparent;
+  }
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }/*# sourceMappingURL=index.css.map */
