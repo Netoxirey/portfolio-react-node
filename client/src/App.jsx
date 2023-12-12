@@ -1,19 +1,19 @@
-import NavBar from "@components/NavBar"
-import HomePage from "@components/HomePage"
-import About from "@components/About"
-import Services from "@components/Services"
-import Design from "./components/Design"
+import { Routes, Route } from "react-router-dom"
+import NavBar from '@components/NavBar'
+import Home from "@components/Home"
+import Dashboard from "@components/Dashboard"
+
 
 function App() {
 
 
   return (
     <>
-    <NavBar/>
-    <HomePage/>
-    <About/>
-    <Services/>
-    <Design/>
+      <NavBar/>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="dashboard" element={<Dashboard/>}/>
+      </Routes>
     </>
   )
 }

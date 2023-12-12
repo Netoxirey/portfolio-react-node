@@ -143,6 +143,19 @@ li {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
+.input_text {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  font-size: 1.6rem;
+}
+.input_text input {
+  all: unset;
+  padding: 1rem 2rem;
+  border: 1px solid #80c6e0;
+  border-radius: 1rem;
+}
+
 .header {
   position: sticky;
   top: 0;
@@ -323,6 +336,14 @@ li {
   .design .design_text h2 {
     text-align: center;
   }
+}
+
+.project_form {
+  width: 130rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
 @keyframes enhance-header {
