@@ -14,7 +14,7 @@ function NavBar() {
     <>
       <header className="header">
         <nav className="navbar">
-          <Link to="/"><img src={pageIcon} alt="Page Icon" className="icon" /></Link>
+          <img src={pageIcon} alt="Page Icon" className="icon" />
           <ul className="navbar_links">
             {links?.map((link) => (
               <li key={link.name}><a href={link.anchor}>{link.name}</a></li>

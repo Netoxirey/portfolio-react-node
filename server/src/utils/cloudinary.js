@@ -1,5 +1,3 @@
-const cloudinary = require('cloudinary').v2;
-
 // Require the cloudinary library
 const cloudinary = require('cloudinary').v2;
 
@@ -33,4 +31,4 @@ const uploadImageCloudinary = async (imagePath) => {
     }
 };
 
-module.exports = uploadImageCloudinary();
+module.exports = uploadImageCloudinary;

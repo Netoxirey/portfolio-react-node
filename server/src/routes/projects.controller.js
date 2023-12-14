@@ -19,31 +19,38 @@ async function httpGetProjects(req, res) {
 }
 
 async function httpPostProject(req, res) {
-    const { title, description, technologies, image, githubUrl, demoUrl } = req.body;
     try {
-        const imageUrl = await uploadImageCloudinary(image);
+        const { title, description, technologies, githubUrl, demoUrl } = req.body;
+        const imageTempPath = req.files.image.tempFilePath;
+
+        const imageUrl = await uploadImageCloudinary(imageTempPath);
+
         const newProject = {
             title,
             description,
-            technologies,
+            technologies: technologies.split(","),
             imageUrl,
             githubUrl,
             demoUrl
-        }
-        const result = await addNewProject(newProject); //Sending the new task to the database.
+        };
+
+        const result = await addNewProject(newProject);
+
         if (!result) {
             return res.status(400).json({
-                message: "Couldn't create new project",
+                message: "Couldn't create project",
             });
         }
+
         return res.status(201).json(result);
     } catch (error) {
         console.error(error);
         res.status(500).json({
-            message: "Internal server error",
+            message: "Internal server error.",
         });
     }
 }
+
 
 module.exports = {
     httpGetProjects,
