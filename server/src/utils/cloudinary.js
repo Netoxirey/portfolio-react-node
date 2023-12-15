@@ -1,4 +1,3 @@
-// Require the cloudinary library
 const cloudinary = require('cloudinary').v2;
 
 // Return "https" URLs by setting secure: true
@@ -8,8 +7,6 @@ cloudinary.config({
     api_secret: process.env.CLOUDINARY_API_SECRET
 });
 
-// Log the configuration
-console.log(cloudinary.config());
 
 const uploadImageCloudinary = async (imagePath) => {
 
@@ -24,7 +21,6 @@ const uploadImageCloudinary = async (imagePath) => {
     try {
       // Upload the image
       const result = await cloudinary.uploader.upload(imagePath, options);
-      console.log(result);
       return result.secure_url;
     } catch (error) {
       console.error(error);

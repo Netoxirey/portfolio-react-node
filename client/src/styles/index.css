@@ -53,7 +53,8 @@ a {
   transition: color 0.3s;
 }
 a:hover {
-  border-bottom: 1px solid #4ca8cd;
+  -webkit-text-decoration: underline #4ca8cd;
+          text-decoration: underline #4ca8cd;
 }
 
 img {
@@ -375,7 +376,7 @@ li {
   border: 1px solid rgba(90, 90, 90, 0.8);
   box-shadow: 1px 3px 50px 15px rgba(0, 0, 0, 0.35);
   padding: 2rem;
-  border-radius: 2.5rem;
+  border-radius: 1.5rem;
 }
 .projects .project_technologies {
   display: flex;
@@ -417,7 +418,9 @@ li {
 
 .contact {
   margin-bottom: 5rem;
-  background-image: radial-gradient(ellipse at top, rgba(36, 90, 122, 0.4), rgba(0, 0, 0, 0), transparent);
+  background: linear-gradient(to bottom right, #4ca8cd, #254b65);
+  padding: 2rem;
+  border-radius: 1.5rem;
 }
 
 .footer {
