@@ -1,5 +1,5 @@
 import contactImage from "../assets/contact.svg"
-import Card from "@components/card"
+import Card from "@components/Card"
 
 function Contact() {
   return (

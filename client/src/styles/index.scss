@@ -63,7 +63,7 @@ a {
     cursor: pointer;
     transition: color 0.3s;
     &:hover {
-        color: $shakespeare-300;
+        border-bottom: 1px solid $shakespeare-400;
     }
 }
 

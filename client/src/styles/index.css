@@ -53,7 +53,7 @@ a {
   transition: color 0.3s;
 }
 a:hover {
-  color: #80c6e0;
+  border-bottom: 1px solid #4ca8cd;
 }
 
 img {
