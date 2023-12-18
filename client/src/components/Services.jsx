@@ -16,8 +16,9 @@ function Services() {
           <ul className="services_ul">
             <li>HTML5 & CSS3</li>
             <li>JavaScript (ES6+)</li>
+            <li>C#</li>
             <li>Responsive Design</li>
-            <li>Front-End Framework (React)</li>
+            <li>Front-End Framework (React, Vue)</li>
             <li>Cross-Browser Compatibility</li>
             <li>Web Performance Optimization</li>
             <li>Version Control/Git</li>
@@ -35,7 +36,7 @@ function Services() {
             Build robust server-side applications and manage databases. My skills include:
           </p>
           <ul className="services_ul">
-            <li>Server-Side Programming (Node.js, Python)</li>
+            <li>Server-Side Programming (Node.js, .Net)</li>
             <li>API Development</li>
             <li>Database Management (SQL, NoSQL)</li>
             <li>Server Management</li>
