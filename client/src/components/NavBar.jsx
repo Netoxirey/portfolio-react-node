@@ -3,7 +3,7 @@ import NavBarMobile from "@components/NavBarMobile";
 import hamburgerIcon from "../assets/hamburger_icon.svg";
 import pageIcon from "../assets/page_icon.svg";
 import { links } from "../utils/utils";
-import cv from "../assets/Ernesto Serna.pdf"
+import cv from "../assets/Ernesto Serna English.pdf"
 
 
 
